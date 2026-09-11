@@ -6,9 +6,9 @@ interface Leader {
 }
 
 const LEADERS: Leader[] = [
-  { name: 'Jack Doe',          role: 'President',                    linkedin: '#'},
-  { name: 'John Doe',     role: 'Treasurer',               linkedin: '#'},
-  { name: 'James Doe',   role: 'Welfare Officer',             linkedin: '#'},
+  { name: 'Name 1',          role: 'President',                    linkedin: '#'},
+  { name: 'Name 2',     role: 'Treasurer',               linkedin: '#'},
+  { name: 'Name 3',   role: 'Welfare Officer',             linkedin: '#'},
 ];
 
 export default function Leadership() {
@@ -19,7 +19,7 @@ export default function Leadership() {
           <div className="hero-scenic__content">
             <div className="page__header">
               <h1 className="page__title">Leadership</h1>
-              <p className="page__subtitle">Our committee drives HFS's mission — from managing the paper fund to organising speaker events and careers support.</p>
+              <p className="page__subtitle">Our committee drives HFS's mission - from managing the paper fund to organising speaker events and careers support.</p>
             </div>
 
             <div className="leader-cards-wrapper">
