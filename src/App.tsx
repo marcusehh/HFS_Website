@@ -1,24 +1,23 @@
 import { useState, useEffect } from 'react';
-import { ROUTES, DEFAULT_ROUTE, type Route } from './routes';
+import { DEFAULT_ROUTE, type Route } from './routes';
 import Home from './pages/Home';
 import Leadership from './pages/Leadership';
-import Articles from './pages/Articles';
-import Programmes from './pages/Programmes';
+import Events from './pages/Events';
+import Sponsorship from './pages/Sponsorship';
 import { METHODS as CONTACT_METHODS } from './pages/Contact';
 
 const TAB_LABELS: Record<Route, string> = {
   home: 'Home',
-  articles: 'Articles',
-  leadership: 'Leadership',
-  programmes: 'Programmes',
+  committee: 'Committee',
+  events: 'Events',
+  sponsorship: 'Sponsorship',
 };
 
-const TAB_ORDER: Route[] = ['home', 'articles', 'leadership', 'programmes'];
+const TAB_ORDER: Route[] = ['home', 'committee', 'events', 'sponsorship'];
 
 export default function App() {
   const [route, setRoute] = useState<Route>(DEFAULT_ROUTE);
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [activeCategory, setActiveCategory] = useState<string | null>(null);
 
   useEffect(() => {
     document.title = 'UCL Hedge Fund Society';
@@ -86,14 +85,14 @@ export default function App() {
         <section className="page container" hidden={route !== 'home'}>
           <Home onNavigate={(r) => setRoute(r as Route)} />
         </section>
-        <section className="page container" hidden={route !== 'articles'}>
-          <Articles activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
-        </section>
-        <section className="page container" hidden={route !== 'leadership'}>
+        <section className="page container" hidden={route !== 'committee'}>
           <Leadership />
         </section>
-        <section className="page container" hidden={route !== 'programmes'}>
-          <Programmes />
+        <section className="page container" hidden={route !== 'events'}>
+          <Events />
+        </section>
+        <section className="page container" hidden={route !== 'sponsorship'}>
+          <Sponsorship />
         </section>
       </main>
 

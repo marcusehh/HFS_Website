@@ -6,12 +6,9 @@ interface Leader {
 }
 
 const LEADERS: Leader[] = [
-  { name: 'President',          role: 'President',                    linkedin: '#', sector: 'Leadership' },
-  { name: 'Vice President',     role: 'Vice President',               linkedin: '#', sector: 'Leadership' },
-  { name: 'Head of Equities',   role: 'Head of Equities',             linkedin: '#', sector: 'Equities' },
-  { name: 'Head of Macro',      role: 'Head of Macroeconomics',       linkedin: '#', sector: 'Macro' },
-  { name: 'Head of Quant',      role: 'Head of Quantitative Strategy', linkedin: '#', sector: 'Quant' },
-  { name: 'Head of Careers',    role: 'Head of Careers & Networking', linkedin: '#', sector: 'Careers' },
+  { name: 'Jack Doe',          role: 'President',                    linkedin: '#'},
+  { name: 'John Doe',     role: 'Treasurer',               linkedin: '#'},
+  { name: 'James Doe',   role: 'Welfare Officer',             linkedin: '#'},
 ];
 
 export default function Leadership() {
